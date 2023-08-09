@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics | Blog</title>
+    <!-- Add your CSS files here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add your custom CSS here (if any) -->
+    <style>
+/* Add these CSS rules to style the images and outline */
+.img-box {
+    display: inline-block;
+    border: 3px solid orange; /* Change the color as needed */
+    padding: 10px;
+}
+
+.img-box img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional CSS styling */
+.blog__item__text {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #ff9933; /* Darker shade of orange on hover */
+}
+.qa-submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.qa-submit-btn::before {
+    content: "";
+    position: absolute;
+    background-color: #ff9933; /* Darker shade of orange on hover */
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: height 0.3s ease;
+}
+
+.qa-submit-btn:hover::before {
+    height: 100%;
+}
+
+.qa-submit-btn:hover {
+    background-color: transparent;
+    color: orange;
+}
+@media (max-width: 768px) {
+    .header__menu {
+        display: none; /* Hide the header__menu by default on small screens */
+    }
+    
+    .header__menu.active {
+        display: block; /* Show the header__menu when active */
+    }
+}
+
+    
+
+    </style>
+</head>
+
+
+<body>
+    <!-- Page Preloder -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__btn">
+                        <a href="./signin.html" class="primary-btn">Subscribe</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li class="dropdown"><a href="#">Subjects</a>
+                    <ul class="dropdown__menu">
+                        <li><a href="./math.html">Mathematics</a></li>
+                        <li><a href="./science.html">Science</a></li>
+                        <li><a href="./english.html">English</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="humberger__menu__about">
+            <div class="humberger__menu__title sidebar__item__title">
+                <h6>About me</h6>
+            </div>
+            <img src="img/humberger/humberger-about.jpg" alt="">
+            <h6>Hi every one! I'm Alankrit Kashyap.</h6>
+            <p>I love sharing my knowledge with others. Follow my blog
+                to learn interesting mathematical concepts and techniques</p>
+            <div class="humberger__menu__about__social sidebar__item__follow__links">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="humberger__menu__subscribe">
+            <div class="humberger__menu__title sidebar__item__title">
+                <h6>Subscribe</h6>
+            </div>
+            <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>
+            <form action="#">
+                <input type="text" class="email-input" placeholder="Your email">
+                <label for="agree-check">
+                    I agree to the terms & conditions
+                    <input type="checkbox" id="agree-check">
+                    <span class="checkmark"></span>
+                </label>
+                <button type="submit" class="site-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-1 col-6 order-md-1 order-1">
+                        <div class="header__humberger">
+                            <i class="fa fa-bars humberger__open"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-10 order-md-2 order-3">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li class="dropdown"><a href="#">Subjects</a>
+                                    <ul class="dropdown__menu">
+                                        <li><a href="./eng.html">English</a></li>
+                                        <li><a href="./math.html">Mathematics</a></li>
+                                        <li><a href="./Science.html">Chemistry/Physics</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="PreAlgebra.html">Math 2 - (Pre Algebra)</a></li>
+                                <li><a href="Math7.html">Math 7</a></li>
+                                <li><a href="Math8.html">Math 8</a></li>
+                                <li><a href="Math11.html">Math 11</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 col-md-1 col-6 order-md-3 order-2">
+                        <div class="header__search">
+                            <i class="fa fa-search search-switch"></i>
+                        </div>
+                    </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 p-0">
+                            <div class="hero__inside__item hero__inside__item--wide set-bg"
+                                data-setbg="img/OIG.jpg">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h4>Vegan White Peach Mug Cobbler With CardamomVegan<br /> White Peach Mug
+                                            Cobbler With Cardamom</h4>
+                                        <ul class="widget">
+                                            <li>by <span>Admin</span></li>
+                                            <li>3 min read</li>
+                                            <li>20 Comment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6  p-0">
+                            <div class="hero__inside__item hero__inside__item--small set-bg"
+                                data-setbg="img/cal.png">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>How to Make a Milkshake With Any <br />Ice Cream, Any Toppings...</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero__inside__item hero__inside__item--small set-bg"
+                                data-setbg="img/math.jpg">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>Vintage Copper Preserve Pan with <br />Brass Handles, Mid 19th Century</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6  p-0">
+                            <div class="hero__inside__item set-bg" data-setbg="img/geometry.jpg">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>Marinated Lentil Salad with Zucch <br />ini and Tomatoes</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 p-0">
+                            <div class="hero__inside__item hero__inside__item--wide set-bg"
+                                data-setbg="img/q.jpg">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h4>Vegan White Peach Mug Cobbler With CardamomVegan<br /> White Peach Mug
+                                            Cobbler With Cardamom</h4>
+                                        <ul class="widget">
+                                            <li>by <span>Admin</span></li>
+                                            <li>3 min read</li>
+                                            <li>20 Comment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 p-0">
+                            <div class="hero__inside__item hero__inside__item--small set-bg"
+                                data-setbg="img/p.jpg">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>How to Make a Milkshake With Any <br />Ice Cream, Any Toppings...</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero__inside__item hero__inside__item--small set-bg"
+                                data-setbg="img/s.jpg">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>Vintage Copper Preserve Pan with <br />Brass Handles, Mid 19th Century</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 p-0">
+                            <div class="hero__inside__item set-bg" data-setbg="img/r.jpg">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>Marinated Lentil Salad with Zucch <br />ini and Tomatoes</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <!-- First Blog Post -->
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <div class="img-box">
+                                <img src="img/basic.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="blog__item__text">
+                            <ul class="blog__item__label">
+                                <li>Mathematics</li>
+                            </ul>
+                            <h5><a href="#">Basic Arithmetic Operations</a></h5>
+                            <ul class="blog__item__widget">
+                                <li>by <span>Admin</span></li>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                            <p>Learn about the fundamental arithmetic operations: addition, subtraction, multiplication,
+                                and division. Understand the order of operations and how to solve numerical expressions.</p>
+                            <a href="https://byjus.com/maths/arithmetic-operations/#:~:text=Let%20us%20understand%20each%20of%20the%20basic%20arithmetic,the%20product%3B%20%E2%80%98%C3%97%E2%80%99%29%20Division%20%28Finding%20the%20quotient%3B%20%E2%80%98%C3%B7%E2%80%99%29" class="primary-btn">Read more</a>
+                        </div>
+                    </div>
+
+                    <!-- Second Blog Post -->
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <div class="img-box">
+                                <img src="img/prealgebra.png" alt="">
+                            </div>
+                        </div>
+                        <div class="blog__item__text">
+                            <ul class="blog__item__label">
+                                <li>Mathematics</li>
+                            </ul>
+                            <h5><a href="#">Introduction to Algebra</a></h5>
+                            <ul class="blog__item__widget">
+                                <li>by <span>Admin</span></li>
+                                <li>4 min read</li>
+                                <li>15 Comment</li>
+                            </ul>
+                            <p>Learn the basics of algebra, including expressions, equations, and inequalities. Understand
+                                how to solve for unknown variables and work with algebraic expressions.</p>
+                            <a href="https://www.khanacademy.org/math/pre-algebra" class="primary-btn">Read more</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more blog posts here -->
+
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="sidebar__item">
+                        <!-- About Me Widget -->
+                        <div class="sidebar__about__item">
+                            <div class="sidebar__item__title">
+                                <h6>About me</h6>
+                            </div>
+                            <img src="img/22.jpg" alt="">
+                            <h6>Hi everyone! I'm <span>Alankrit Kashyap.</span></h6>
+                            <p>I love sharing my knowledge with others. Follow my blog
+                                to learn interesting mathematical concepts and techniques.</p>
+                            <a href="#" class="primary-btn">Read more</a>
+                        </div>
+
+                        <!-- Follow Me Widget -->
+                        <div class="sidebar__follow__item">
+                            <div class="sidebar__item__title">
+                                <h6>Follow me</h6>
+                            </div>
+                            <div class="sidebar__item__follow__links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-envelope-o"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Advertisement Banner -->
+                        <div class="sidebar__item__banner">
+                            <img src="img/sidebar/banner.jpg" alt="">
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="sidebar__item__categories">
+                            <div class="sidebar__item__title">
+                                <h6>Categories</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#">Subjects<span>3</span></a></li>
+                                <li class="p-left"><a href="#">English <span>2</span></a></li>
+                                <li><a href="#">Essay<span>1</span></a></li>
+                                <li><a href="#">Essay Understandings<span>1</span></a></li>
+                                <li class="p-left"><a href="#">Mathematics <span>4</span></a></li>
+                                <li><a href="#">Math 2 - (Pre Algebra)<span>3</span></a></li>
+                                <li><a href="#">Math 7<span>1</span></a></li>
+                                <li><a href="#">Math 8<span>1</span></a></li>
+                                <li><a href="#">Math 11<span>1</span></a></li>
+                                <li class="p-left"><a href="#">Science <span>6</span></a></li>
+                                <li><a href="#">Chem 10 -<span>1</span></a></li>
+                                <li><a href="#">Chem 11 -<span>1</span></a></li>
+                                <li><a href="#">Chem 12 -<span>1</span></a></li>
+                                <li><a href="#">Physics S21<span>1</span></a></li>
+                                <li><a href="#">Physics S22<span>1</span></a></li>
+                                <li><a href="#">Physics S27<span>1</span></a></li>
+
+                            </ul>
+                        </div>
+
+                        <!-- Subscription Widget -->
+                        <div class="sidebar__subscribe__item">
+                            <div class="sidebar__item__title">
+                                <h6>Subscribe</h6>
+                            </div>
+                            <p>Subscribe to our newsletter and get our newest updates right in your inbox.</p>
+                            <form action="#">
+                                <input type="text" class="email-input" placeholder="Your email">
+                                <label for="s-agree-check">
+                                    I agree to the terms & conditions
+                                    <input type="checkbox" id="s-agree-check">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <button type="submit" class="site-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Math Q/A Section -->
+    <div class="container qa-section">
+        <h2>Math Q/A</h2>
+        <form id="qaForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+        <div class="form-group">
+            <label for="question1">Question 1</label>
+            <textarea class="form-control" id="question1" name="question1" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="question2">Question 2</label>
+            <textarea class="form-control" id="question2" name="question2" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="paymentAmount">Payment Amount ($)</label>
+            <input type="number" class="form-control" id="paymentAmount" name="paymentAmount" min="1" step="1" required readonly>
+        </div>
+
+        <button type="submit" class="qa-submit-btn">Submit Question</button>
+    </form>
+</div>
+    <!-- Math Q/A Section End -->
+
+    <!-- Payments Section Begin -->
+    <section class="payments spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="payments__text">
+                        <h4>Accepted Payments</h4>
+                        <ul class="payments__list">
+                            <li><i class="fa fa-cc-visa"></i></li>
+                            <li><i class="fa fa-cc-paypal"></i></li>
+                            <li><i class="fa fa-cc-mastercard"></i></li>
+                            <!-- Add more payment options here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Payments Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__instagram">
+                <!-- Instagram feed here -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__text">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Connect with us on social media and stay updated with our latest blog posts and news.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        <p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved By Alankrit Kashyap| Created by
+                            [ScarHost.tech]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Add your JS files here (if any) -->
+    <script>
+        const question1Field = document.getElementById('question1');
+        const question2Field = document.getElementById('question2');
+        const paymentAmountField = document.getElementById('paymentAmount');
+    
+        question1Field.addEventListener('input', updatePaymentAmount);
+        question2Field.addEventListener('input', updatePaymentAmount);
+    
+        function updatePaymentAmount() {
+            const question1Value = question1Field.value.trim();
+            const question2Value = question2Field.value.trim();
+            const totalQuestions = (question1Value !== '' ? 1 : 0) + (question2Value !== '' ? 1 : 0);
+            paymentAmountField.value = totalQuestions;
+        }
+        src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".humberger__open").click(function () {
+            $(".header__menu").toggleClass("active");
+        });
+    });
+    </script>
+
+</body>
+
+</html>
